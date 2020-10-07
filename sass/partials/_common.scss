@@ -14,8 +14,9 @@ body {
 }
 
 .cards {
-  margin-top: 30px;
   display: flex;
-  justify-content: center;
   flex-flow: wrap;
+  justify-content: center;
+
+  margin-top: 30px;
 }

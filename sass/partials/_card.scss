@@ -1,21 +1,26 @@
 .card {
   width: calc(25% - 40px);
   margin: 20px;
-  background-color: $main_color;
   padding: 20px;
+
   text-align: center;
+
+  background-color: $main_color;
 
   &__image {
     width: 100%;
     margin-bottom: 20px;
   }
   &__title {
-    color: $white;
     margin-bottom: 20px;
+
     text-transform: uppercase;
+
+    color: $white;
   }
   &__author, &__year {
     color: $main_color-light;
+
     font-weight: normal;
   }
 }
