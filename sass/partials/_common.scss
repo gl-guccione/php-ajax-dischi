@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: $main_color_dark;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}

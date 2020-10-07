@@ -1,0 +1,25 @@
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: $header_height;
+
+  background-color: $main_color;
+  &__container {
+    display: flex;
+    align-items: center;
+
+    height: 100%;
+
+    @extend .container;
+  }
+  + * {
+    margin-top: $header_height;
+  }
+  &__img {
+    height: $header_height / 100 * 60;
+  }
+}

@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container, .header__container {
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #1d2d3c;
+}
+
+.cards {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-flow: wrap;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #2e3a46;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header + * {
+  margin-top: 60px;
+}
+
+.header__img {
+  height: 36px;
+}
+
+.card {
+  width: calc(25% - 40px);
+  margin: 20px;
+  background-color: #2e3a46;
+  padding: 20px;
+  text-align: center;
+}
+
+.card__image {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.card__title {
+  color: #fff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.card__author, .card__year {
+  color: #717a81;
+  font-weight: normal;
+}
+
+/*# sourceMappingURL=style.css.map */
