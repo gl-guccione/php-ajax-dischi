@@ -10,8 +10,8 @@
   background-color: $main_color;
   &__container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 
     height: 100%;
 
@@ -24,11 +24,14 @@
     height: $header_height / 100 * 60;
   }
   &__input {
-    outline: none;
-    border: none;
     padding: 3px 5px;
+
+    border: none;
+    outline: none;
   }
   &__button {
+    margin-left: 5px;
+
     @extend .btn;
   }
 }

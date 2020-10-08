@@ -10,7 +10,7 @@
 
   } else {
 
-    $author = $_GET["author"];
+    $author = strtolower($_GET["author"]);
     $filtered_databse = [];
 
     foreach ($database as $key => $value) {

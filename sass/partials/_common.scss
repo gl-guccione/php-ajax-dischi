@@ -15,16 +15,20 @@ body {
 
 .error_message {
   padding: 40px;
-  font-size: 35px;
+
   color: $main_color-light;
+
+  font-size: 35px;
 }
 
 .btn {
-  background-color: $main_color_dark;
   padding: 5px 10px;
-  border-radius: 5px;
-  color: $white;
+
   text-decoration: none;
+
+  color: $white;
+  border-radius: 5px;
+  background-color: $main_color_dark;
 }
 
 .cards {

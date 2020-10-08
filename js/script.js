@@ -3,6 +3,7 @@
 function searchButton() {
 
   let searchValue = $(".header__input").val();
+  $(".header__button").attr("data-search", searchValue);
   $(".header__input").val("");
 
   if (searchValue == "") {
@@ -18,8 +19,10 @@ function displayData(data) {
 
   if (data.length == 0) {
 
-    let errorMessage = "La ricerca non ha prodotto nessun risultato!";
+    let searchValue = $(".header__button").attr("data-search");
+    let errorMessage = "La ricerca \"" + searchValue + "\" non ha prodotto nessun risultato!";
     $(".cards").append("<h2 class=\"error_message\">" + errorMessage + "<h2>");
+
 
   } else {
 
@@ -63,6 +66,10 @@ $(document).ready(function () {
     searchButton();
   });
 
-
+  $(".header__input").keyup(function(e) {
+    if (e.which == 13) {
+      searchButton();
+    }
+  });
 
 });
