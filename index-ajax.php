@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,6 +23,10 @@
       <header class="header">
         <div class="header__container">
           <img class="header__img" src="img/logo.png" alt="logo Spotify">
+          <div class="header__searchbar">
+            <input class="header__input" type="text" placeholder="nome autore">
+            <a class="header__button" href="#">Cerca autore</a>
+          </div>
         </div>
       </header>
       <!-- /header -->

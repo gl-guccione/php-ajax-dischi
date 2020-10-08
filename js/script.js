@@ -1,5 +1,16 @@
 // functions
 
+function searchButton() {
+
+  let searchValue = $(".header__input").val();
+  $(".header__input").val("");
+
+  if (searchValue == "") {
+    searchValue = "all";
+  }
+  cdApi(searchValue);
+}
+
 // function that display in the html the data from "data" parameter
 function displayData(data) {
 
@@ -7,7 +18,8 @@ function displayData(data) {
 
   if (data.length == 0) {
 
-    console.log("array vuoto");
+    let errorMessage = "La ricerca non ha prodotto nessun risultato!";
+    $(".cards").append("<h2 class=\"error_message\">" + errorMessage + "<h2>");
 
   } else {
 
@@ -24,9 +36,12 @@ function displayData(data) {
 }
 
 // function that make an ajax request to get the cd info
-function cdApi() {
+function cdApi(filter) {
   $.ajax({
     "url": "http://localhost:8888/php-ajax-dischi/api/cd",
+    "data": {
+      "author": filter,
+    },
     "success": function (result) {
       displayData(result);
     },
@@ -39,5 +54,15 @@ function cdApi() {
 
 // script
 $(document).ready(function () {
-  cdApi();
+
+  $(".header__input").val("");
+
+  cdApi("all");
+
+  $(".header__button").click(function() {
+    searchButton();
+  });
+
+
+
 });

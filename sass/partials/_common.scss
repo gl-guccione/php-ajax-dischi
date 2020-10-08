@@ -13,6 +13,20 @@ body {
   background-color: $main_color_dark;
 }
 
+.error_message {
+  padding: 40px;
+  font-size: 35px;
+  color: $main_color-light;
+}
+
+.btn {
+  background-color: $main_color_dark;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: $white;
+  text-decoration: none;
+}
+
 .cards {
   display: flex;
   flex-flow: wrap;

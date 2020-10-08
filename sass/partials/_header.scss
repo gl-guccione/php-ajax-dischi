@@ -10,6 +10,7 @@
   background-color: $main_color;
   &__container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
 
     height: 100%;
@@ -21,5 +22,13 @@
   }
   &__img {
     height: $header_height / 100 * 60;
+  }
+  &__input {
+    outline: none;
+    border: none;
+    padding: 3px 5px;
+  }
+  &__button {
+    @extend .btn;
   }
 }
