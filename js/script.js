@@ -26,8 +26,8 @@ function displayData(data) {
 
   } else {
 
-    var source = $("#cd-template").html();
-    var template = Handlebars.compile(source);
+    let source = $("#cd-template").html();
+    let template = Handlebars.compile(source);
 
     for (let i = 0; i < data.length; i++) {
 
@@ -42,6 +42,7 @@ function displayData(data) {
 function cdApi(filter) {
   $.ajax({
     "url": "http://localhost:8888/php-ajax-dischi/api/cd",
+    "method": "GET",
     "data": {
       "author": filter,
     },
